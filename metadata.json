@@ -1,0 +1,6 @@
+{
+  "name": "Listener Segmentation",
+  "description": "Unsupervised K-Means clustering web application mapping music listener behaviors across listening orbits with real-time client-side ML inference.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

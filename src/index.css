@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Fraunces", "Playfair Display", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", "Space Grotesk", system-ui, -apple-system, sans-serif;
+  --font-display: "Space Grotesk", "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-tech: "Space Grotesk", monospace;
+  
+  --color-bento-bg: #020617;
+  --color-bento-card: #0F172A;
+  --color-bento-card-subtle: #1E293B;
+  --color-bento-border: #1E293B;
+  --color-bento-border-hover: #334155;
+  
+  --color-accent-emerald: #10B981;
+  --color-accent-amber: #F2B85C;
+  --color-accent-blue: #3B82F6;
+  --color-accent-indigo: #6366F1;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #020617;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(16, 185, 129, 0.05) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(59, 130, 246, 0.05) 0px, transparent 50%),
+    radial-gradient(at 50% 100%, rgba(242, 184, 92, 0.04) 0px, transparent 50%);
+  min-height: 100vh;
+  color: #E2E8F0;
+}
+
+/* Custom range input styling matching Bento aesthetic */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: #1E293B;
+  height: 6px;
+  border-radius: 9999px;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+input[type="range"]:hover {
+  background: #334155;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  background: #10B981;
+  cursor: grab;
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.5), 0 0 0 2px #020617;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+  background: #34D399;
+  box-shadow: 0 0 16px rgba(16, 185, 129, 0.8), 0 0 0 3px #020617;
+}
+
+input[type="range"]::-webkit-slider-thumb:active {
+  cursor: grabbing;
+  transform: scale(1.25);
+  box-shadow: 0 0 20px rgba(16, 185, 129, 1), 0 0 0 3px rgba(16, 185, 129, 0.4);
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  background: #10B981;
+  border: 2px solid #020617;
+  cursor: grab;
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.5);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1E293B;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
